@@ -1,4 +1,4 @@
-package LojaProdutos;
+package ProdutosLoja;
 
 public class Produtos {
     private String nome;

@@ -9,7 +9,7 @@ public class CarrinhodeCompras {
     private List<Produtos> produtos;
 
     public CarrinhodeCompras() {
-        this.produtos = new ArrayList<Produtos>();
+        this.produtos = new ArrayList<>();
     }
 
     public void adicionarProduto(Produtos produto) {
