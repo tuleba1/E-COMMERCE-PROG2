@@ -1,12 +1,14 @@
 package LojaProdutos;
 
+import ProdutosLoja.Produtos;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Carrinho {
+public class CarrinhodeCompras {
     private List<Produtos> produtos;
 
-    public Carrinho() {
+    public CarrinhodeCompras() {
         this.produtos = new ArrayList<Produtos>();
     }
 
@@ -30,6 +32,10 @@ public class Carrinho {
             total+=produto.getPreco();
         }
         return total;
+    }
+
+    public List<Produtos> getProdutos() {
+        return produtos;
     }
 
 }
