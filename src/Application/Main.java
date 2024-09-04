@@ -1,17 +1,23 @@
 package Application;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import ClienteEcommerce.Cliente;
+import LojaProdutos.CarrinhodeCompras;
+import LojaProdutos.Compra;
+import ProdutosLoja.Acessorios;
+import ProdutosLoja.Roupa;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Roupa camisa = new Roupa("Camisa Polo", 120.00, 50, "M", "Azul");
+        Acessorios relogio = new Acessorios("Relógio de Pulso", 250.00, 30, "Couro", "Analógico");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Cliente cliente = new Cliente("Maria Oliveira", "maria@gmail.com");
+
+        CarrinhodeCompras carrinho = new CarrinhodeCompras();
+        carrinho.adicionarProduto(camisa);
+        carrinho.adicionarProduto(relogio);
+
+        Compra compra = new Compra(cliente, carrinho.getProdutos());
+        compra.exibirDetalhesCompra();
     }
 }
