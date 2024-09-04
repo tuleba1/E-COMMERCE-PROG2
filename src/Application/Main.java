@@ -4,20 +4,39 @@ import ClienteEcommerce.Cliente;
 import LojaProdutos.CarrinhodeCompras;
 import LojaProdutos.Compra;
 import ProdutosLoja.Acessorios;
+import ProdutosLoja.Loja;
 import ProdutosLoja.Roupa;
+
+import java.util.Scanner;
+
+import static java.lang.System.exit;
 
 public class Main {
     public static void main(String[] args) {
-        Roupa camisa = new Roupa("Camisa Polo", 120.00, 50, "M", "Azul");
-        Acessorios relogio = new Acessorios("Relógio de Pulso", 250.00, 30, "Couro", "Analógico");
+        Loja loja = new Loja();
 
-        Cliente cliente = new Cliente("Maria Oliveira", "maria@gmail.com");
+        Scanner sc = new Scanner(System.in);
 
-        CarrinhodeCompras carrinho = new CarrinhodeCompras();
-        carrinho.adicionarProduto(camisa);
-        carrinho.adicionarProduto(relogio);
+        System.out.println("Bem-vindo a loja! Escolha uma opção: ");
+        System.out.println("1. Ver roupas.");
+        System.out.println("2. Ver acessórios.");
+        System.out.println("3. Sair da loja.");
+        int opcao = sc.nextInt();
 
-        Compra compra = new Compra(cliente, carrinho.getProdutos());
-        compra.exibirDetalhesCompra();
+
+        if(opcao == 1){
+            loja.mostrarRoupas();
+        }
+        else if(opcao == 2){
+            loja.mostrarAcessorios();
+        }
+        else if(opcao == 3){
+            System.out.println("Saindo do aplicativo.");
+            exit(0);
+        }
+        else{
+            System.out.println("Opção inválida.");
+        }
     }
+
 }

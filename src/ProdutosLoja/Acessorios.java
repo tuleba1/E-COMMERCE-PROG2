@@ -17,4 +17,9 @@ public class Acessorios extends Produtos {
     public String getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString(){
+        return super.toString() + "- Material: " + material + "- Tipo: " + tipo;
+    }
 }

@@ -34,4 +34,9 @@ public class Produtos {
     public void setEstoque(int estoque) {
         this.estoque = estoque;
     }
+
+    @Override
+    public String toString(){
+        return nome + " - R$" + preco + " - Estoque " + estoque + "\n";
+    }
 }
