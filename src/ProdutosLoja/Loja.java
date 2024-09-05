@@ -12,8 +12,23 @@ public class Loja {
         this.roupas = new ArrayList<>();
         this.acessorios = new ArrayList<>();
 
+        Roupa camisaUv = new Roupa("Camiseta UV", 149.90,  "Preto");
+        camisaUv.adicionarVariantes("PP", 25);
+        camisaUv.adicionarVariantes("P", 32);
+        camisaUv.adicionarVariantes("M", 43);
+        camisaUv.adicionarVariantes("G", 18);
+        camisaUv.adicionarVariantes("GG", 11);
 
-        roupas.add(new Roupa("Camiseta UV", 149.90, 35 ,"M", "Preto"));
+        Roupa camisaRegata = new Roupa("Camisa Regata", 74.90,  "Branco");
+        camisaRegata.adicionarVariantes("PP", 23);
+        camisaRegata.adicionarVariantes("P", 28);
+        camisaRegata.adicionarVariantes("M", 11);
+        camisaRegata.adicionarVariantes("G", 32);
+        camisaRegata.adicionarVariantes("GG", 22);
+        
+
+
+        roupas.add(new Roupa("Camiseta UV", 149.90, ,"M", "Preto"));
         roupas.add(new Roupa("Camisa Regata", 74.90, 55 ,"G", "Branco"));
         roupas.add(new Roupa("Camiseta manga curta", 179.90, 23,"P", "Cinza"));
         roupas.add(new Roupa("Calção poliamida", 124.90, 18 ,"M", "Preto"));
